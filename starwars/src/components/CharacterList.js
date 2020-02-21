@@ -11,8 +11,8 @@ const CharacterList = () => {
         Axios
           .get('https://swapi.co/api/people/')
           .then(response => {
-            console.log(response);
-            setCharacters(response);
+            console.log(response.data.results);
+            setCharacters(response.data.results);
           })
           .catch(error => {
             console.log('Error:', error);
@@ -21,20 +21,23 @@ const CharacterList = () => {
 
     return (
         <div className='character'>
-            {characters.map(character => {
+            {characters.map((character, index) => {
                 return (
                    <CharacterCard
-                   
+                        key={index}
+                        name={character.name}
+                        birth_year={character.birth_year}
+                        gender={character.gender}
+                        height={character.height}
+                        mass={character.mass}
+                        hair_color={character.hair_color}
+                        skin_color={character.skin_color}
+                        eye_color={character.eye_color}
                    /> 
                 );
             })}
         </div>
     )
-
-
-
-
-
 }
 
 export default CharacterList
