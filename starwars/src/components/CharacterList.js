@@ -5,6 +5,7 @@ import CharacterCard from './CharacterCard';
 
 
 
+
 const CharacterList = () => {
 
     const [characters, setCharacters] = useState([]);

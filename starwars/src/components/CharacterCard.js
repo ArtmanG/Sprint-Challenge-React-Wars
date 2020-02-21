@@ -6,7 +6,6 @@ width: 40%;
 margin: 0 auto;
 `;
 
-
 const CharacterName = styled.div`
 font-size: 2rem;
 color: yellow;
@@ -14,6 +13,15 @@ color: yellow;
 const NamePlate = styled.div` 
 background-color: black;
 opacity: 60%;
+`;
+
+const DescPlate = styled.div`
+background-color: white;
+opacity: 60%
+`;
+
+const Descriptions = styled.div`
+font-size: 1rem;
 `;
 
 const CharacterCard = props => {
@@ -24,20 +32,22 @@ const CharacterCard = props => {
                         <h2>{props.name}</h2>
                     </CharacterName>
                 </NamePlate>
-                <div className='bottom'>
-                    <p>Birth Year: {props.birth_year}</p>
-                    {/* <p>Species: {props.species}</p> */}
-                    <p>Gender: {props.gender}</p>
-                    {/* <p>Homeworld: {props.homeworld}</p> */}
-                    <p>Height: {props.height}</p>
-                    <p>Mass: {props.mass}</p>
-                    <p>Hair Color: {props.hair_color}</p>
-                    <p>Skin Color: {props.skin_color}</p>
-                    <p>Eye Color: {props.eye_color}</p>
-                    {/* <p>Vehicles: {props.vehicles}</p>
-                    <p>Starships: {props.starships}</p>
-                    <p>Film Appearances: {props.films}</p> */}
-                </div>
+                <DescPlate>
+                    <Descriptions>
+                        <p>Birth Year: {props.birth_year}</p>
+                        {/* <p>Species: {props.species}</p> */}
+                        <p>Gender: {props.gender}</p>
+                        {/* <p>Homeworld: {props.homeworld}</p> */}
+                        <p>Height: {props.height}</p>
+                        <p>Mass: {props.mass}</p>
+                        <p>Hair Color: {props.hair_color}</p>
+                        <p>Skin Color: {props.skin_color}</p>
+                        <p>Eye Color: {props.eye_color}</p>
+                        {/* <p>Vehicles: {props.vehicles}</p>
+                        <p>Starships: {props.starships}</p>
+                        <p>Film Appearances: {props.films}</p> */}
+                    </Descriptions>
+                </DescPlate>
             </Cards>
     )
 }
