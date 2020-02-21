@@ -10,6 +10,11 @@ const CharacterName = styled.div`
 font-size: 2rem;
 color: yellow;
 `;
+
+const NewH2 = styled.h2`
+margin-bottom: 0;
+`;
+
 const NamePlate = styled.div` 
 background-color: black;
 opacity: 60%;
@@ -29,7 +34,7 @@ const CharacterCard = props => {
             <Cards key={props.id}>
                 <NamePlate>
                     <CharacterName>
-                        <h2>{props.name}</h2>
+                        <NewH2>{props.name}</NewH2>
                     </CharacterName>
                 </NamePlate>
                 <DescPlate>
