@@ -1,20 +1,21 @@
 import React from 'react';
 import CharacterList from './components/CharacterList'
 import './App.css';
+import styled from 'styled-components';
 
-
+const NewH1 = styled.h1`
+font-size: 5rem;
+color: black;
+drop-shadow: yellow 1px 1px;
+margin: 0 0 5%;
+padding-top: 3%;
+`;
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
-
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
 
   return (
     <div className='App'>
-      <h1 className='Header'>React Wars</h1>
+      <NewH1>React Wars</NewH1>
       <CharacterList />
     </div>
   );

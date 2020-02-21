@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import CharacterCard from './CharacterCard';
+// import styled from 'styled-components';
+
 
 
 const CharacterList = () => {
@@ -23,7 +25,7 @@ const CharacterList = () => {
         <div className='character'>
             {characters.map((character, index) => {
                 return (
-                   <CharacterCard
+                <CharacterCard
                         key={index}
                         name={character.name}
                         birth_year={character.birth_year}
@@ -33,7 +35,7 @@ const CharacterList = () => {
                         hair_color={character.hair_color}
                         skin_color={character.skin_color}
                         eye_color={character.eye_color}
-                   /> 
+                /> 
                 );
             })}
         </div>
